@@ -11,6 +11,10 @@ mongoose.connect(mongoURI).then(()=>{
     console.log('ERROR:'+err)
 });
 
+app.get('/', (req,res)=>{
+    res.send('Hello, i am working fine')
+})
+
 app.use('/category',category)
 
 app.listen(3500, ()=>{console.log(`server started 3500`)});
